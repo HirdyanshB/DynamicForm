@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Dynamic Form Builder [![Live Demo](https://img.shields.io/badge/Live%20Demo-ReactFormDynamic-4c9c6c)](https://reactformdynamic.netlify.app/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A dynamic form builder that allows users to create and submit forms based on selected form types. The form types include "User Information," "Address Information," and "Payment Information." This app dynamically generates form fields based on mock API data and displays progress as the user completes the required fields.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Dynamic Form Fields:** The form fields are generated based on the selected form type (e.g., User Information, Address Information, or Payment Information).
+- **Progress Bar:** A progress bar is displayed to show the percentage of required fields filled out.
+- **Validation:** Each field is validated based on its type (e.g., text, number, dropdown, etc.), with appropriate error messages displayed when fields are incorrect or empty.
+- **Conditional Input Handling:** Special handling for fields such as `cardNumber` and `cvv` to ensure that input follows the correct format.
+- **Success Message:** Upon successful form submission, a success message is shown to the user.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React:** Used to build the user interface and handle form logic.
+- **React Bootstrap:** For styling and UI components like the progress bar and alerts.
+- **CSS:** Custom styles for a clean and modern design, using Google Fonts (Roboto) and gradient backgrounds.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone the repository to your local machine:
+   ```bash
+   git clone https://github.com/yourusername/DynamicForm.git
+2. Navigate to the project directory:
+    ```bash
+   cd DynamicForm
+3. Install the necessary dependencies:
+   ```bash
+   npm install
+4. Start the application:
+   ```bash
+   npm start
+5. Open your browser and go to http://localhost:3000 to view the app.      
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## App Overview
 
-### `npm run build`
+The application contains the following key components:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **App:** The main component that holds the state of the selected form type and renders the appropriate form.
+- **DynamicForm:** A form component that dynamically generates form fields based on the selected form type. Handles field validation and updates progress.
+- **ProgressBar:** Displays the current progress of the form as a percentage.
+- **Mock API Data:** Sample data to simulate API calls and define the structure of each form type (User Information, Address Information, Payment Information).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Form Types
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### User Information
+- First Name
+- Last Name
+- Age
 
-### `npm run eject`
+### Address Information
+- Street
+- City
+- State
+- Zip Code
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Payment Information
+- Card Number
+- Expiry Date
+- CVV
+- Cardholder Name
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Validation Rules
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Required fields must be filled out before submission.
+- The `Age` field must be a number.
+- `Card Number` and `CVV` fields have special validation for numeric input.
+- Text fields must be at least 2 characters long.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Styling
 
-## Learn More
+- **Fonts:** Google Fonts (Roboto) for modern typography.
+- **Background:** Linear gradient background with a soft transition for a clean and minimalistic look.
+- **Buttons:** Interactive buttons with gradient hover effects.
+- **Form Fields:** Styled form controls with subtle shadow and rounded borders for a pleasant user experience.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions are welcome! Feel free to fork the repository, create a branch, and submit a pull request.
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open-source and available under the [MIT License](LICENSE).
