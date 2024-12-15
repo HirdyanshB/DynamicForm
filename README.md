@@ -20,7 +20,7 @@ A dynamic form builder that allows users to create and submit forms based on sel
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/yourusername/DynamicForm.git
+   git clone https://github.com/HirdyanshB/DynamicForm.git
 2. Navigate to the project directory:
     ```bash
    cd DynamicForm
